@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680d2a8380c8dcd4887836399dfe78e0, type: 3}
+  m_Name: Legendary Chest
+  m_EditorClassIdentifier: 
+  chest: 4
+  coinUpperLimit: 1200
+  coinLowerLimit: 1000
+  gemUpperLimit: 100
+  gemLowerLimit: 80
+  timerInMinutes: 180
+  closedChestImage: {fileID: 21300000, guid: 58e065b0b74f8c6469a788ff8f9b9f79, type: 3}
+  openChestImage: {fileID: 21300000, guid: e615a11415b72584f975f55d3d6eaa96, type: 3}
