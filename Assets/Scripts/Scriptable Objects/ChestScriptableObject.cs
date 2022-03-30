@@ -7,12 +7,12 @@ namespace Scriptable
     public class ChestScriptableObject : ScriptableObject
     {
         [SerializeField] private ChestTypes chest;
-        [SerializeField] private int coinUpperLimit;
-        [SerializeField] private int coinLowerLimit;
-        [SerializeField] private int gemUpperLimit;
-        [SerializeField] private int gemLowerLimit;
-        [SerializeField] private int timerInMinutes;
-        [SerializeField] private Sprite closedChestImage;
-        [SerializeField] private Sprite openChestImage;
+        [SerializeField] public int coinUpperLimit;
+        [SerializeField] public int coinLowerLimit;
+        [SerializeField] public int gemUpperLimit;
+        [SerializeField] public int gemLowerLimit;
+        [SerializeField] public int timerInMinutes;
+        [SerializeField] public Sprite closedChestImage;
+        [SerializeField] public Sprite openChestImage;
     }
 }
