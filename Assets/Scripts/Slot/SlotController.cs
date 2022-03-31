@@ -21,6 +21,10 @@ namespace SlotService
                     SlotFullPopUp.SetActive(true);
                 }
             }
+            else
+            {
+                slots[slot].SpawnRandomChest();
+            }
         }
         private int GetEmptySlot()
         {

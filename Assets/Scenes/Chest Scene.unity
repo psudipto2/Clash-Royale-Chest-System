@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 47519904}
   - component: {fileID: 47519906}
   - component: {fileID: 47519905}
+  - component: {fileID: 47519907}
   m_Layer: 5
   m_Name: Opening Chest Pop Up
   m_TagString: Untagged
@@ -201,6 +202,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47519903}
   m_CullTransparentMesh: 1
+--- !u!114 &47519907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47519903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e397db7b07aa44a85b1141eeee57dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PopUp: {fileID: 47519903}
+  cancelButton: {fileID: 728953624}
 --- !u!1 &83420840
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +227,8 @@ GameObject:
   - component: {fileID: 83420841}
   - component: {fileID: 83420843}
   - component: {fileID: 83420842}
+  - component: {fileID: 83420845}
+  - component: {fileID: 83420844}
   m_Layer: 5
   m_Name: Chest Slot 2
   m_TagString: Untagged
@@ -278,6 +295,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83420840}
   m_CullTransparentMesh: 1
+--- !u!114 &83420844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83420840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b12f538005dda4b867a05fd608e76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSlot: {fileID: 0}
+  slotAvaiable: {fileID: 968821263}
+  slotNotAvaiable: {fileID: 1825551567}
+  chestButton: {fileID: 1640210860}
+  timerText: {fileID: 1313982574}
+--- !u!114 &83420845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83420840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7015be1c9ca7344abb849a5536d74b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 1
+  chestView: {fileID: 83420844}
 --- !u!1 &84853721
 GameObject:
   m_ObjectHideFlags: 0
@@ -2996,6 +3044,7 @@ GameObject:
   - component: {fileID: 737221212}
   - component: {fileID: 737221214}
   - component: {fileID: 737221213}
+  - component: {fileID: 737221215}
   m_Layer: 5
   m_Name: Opened Chest Pop Up
   m_TagString: Untagged
@@ -3063,6 +3112,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737221211}
   m_CullTransparentMesh: 1
+--- !u!114 &737221215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737221211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e397db7b07aa44a85b1141eeee57dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PopUp: {fileID: 737221211}
+  cancelButton: {fileID: 682448546}
 --- !u!1 &766974101
 GameObject:
   m_ObjectHideFlags: 0
@@ -3541,6 +3604,7 @@ GameObject:
   - component: {fileID: 865256431}
   - component: {fileID: 865256433}
   - component: {fileID: 865256432}
+  - component: {fileID: 865256434}
   m_Layer: 5
   m_Name: Closed Chest Pop Up
   m_TagString: Untagged
@@ -3608,6 +3672,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865256430}
   m_CullTransparentMesh: 1
+--- !u!114 &865256434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865256430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e397db7b07aa44a85b1141eeee57dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PopUp: {fileID: 865256430}
+  cancelButton: {fileID: 1938909816}
 --- !u!1 &879436486
 GameObject:
   m_ObjectHideFlags: 0
@@ -3619,6 +3697,8 @@ GameObject:
   - component: {fileID: 879436487}
   - component: {fileID: 879436489}
   - component: {fileID: 879436488}
+  - component: {fileID: 879436491}
+  - component: {fileID: 879436490}
   m_Layer: 5
   m_Name: Chest Slot 4
   m_TagString: Untagged
@@ -3685,50 +3765,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879436486}
   m_CullTransparentMesh: 1
---- !u!1 &888915935
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 888915937}
-  - component: {fileID: 888915936}
-  m_Layer: 0
-  m_Name: ChestView
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &888915936
+--- !u!114 &879436490
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 888915935}
+  m_GameObject: {fileID: 879436486}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50b12f538005dda4b867a05fd608e76c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closedChestPopup: {fileID: 865256430}
---- !u!4 &888915937
-Transform:
+  currentSlot: {fileID: 0}
+  slotAvaiable: {fileID: 163025880}
+  slotNotAvaiable: {fileID: 101241204}
+  chestButton: {fileID: 1836102663}
+  timerText: {fileID: 628368932}
+--- !u!114 &879436491
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 888915935}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 879436486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7015be1c9ca7344abb849a5536d74b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 1
+  chestView: {fileID: 879436490}
 --- !u!1 &947292866
 GameObject:
   m_ObjectHideFlags: 0
@@ -4716,6 +4783,7 @@ GameObject:
   - component: {fileID: 1102996950}
   - component: {fileID: 1102996952}
   - component: {fileID: 1102996951}
+  - component: {fileID: 1102996953}
   m_Layer: 5
   m_Name: Open Chest Pop Up
   m_TagString: Untagged
@@ -4783,6 +4851,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102996949}
   m_CullTransparentMesh: 1
+--- !u!114 &1102996953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102996949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e397db7b07aa44a85b1141eeee57dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PopUp: {fileID: 1102996949}
+  cancelButton: {fileID: 1667983316}
 --- !u!1 &1108903381
 GameObject:
   m_ObjectHideFlags: 0
@@ -4917,6 +4999,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108903381}
   m_CullTransparentMesh: 1
+--- !u!1 &1129727177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1129727179}
+  - component: {fileID: 1129727178}
+  m_Layer: 0
+  m_Name: Chest Service
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1129727178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129727177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a74c815b0631047997ed02f6291f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestList: {fileID: 11400000, guid: 3440654a249581d429a6ad761aa55d04, type: 2}
+  chestScriptable: {fileID: 0}
+--- !u!4 &1129727179
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129727177}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1135259996
 GameObject:
   m_ObjectHideFlags: 0
@@ -5420,6 +5547,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255817290}
   m_CullTransparentMesh: 1
+--- !u!1 &1257397012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1257397013}
+  - component: {fileID: 1257397014}
+  m_Layer: 0
+  m_Name: Timer Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1257397013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257397012}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1257397014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257397012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d68d34c1de1147b469e9119227ad08d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1308078352
 GameObject:
   m_ObjectHideFlags: 0
@@ -6210,6 +6380,7 @@ GameObject:
   - component: {fileID: 1433244945}
   - component: {fileID: 1433244947}
   - component: {fileID: 1433244946}
+  - component: {fileID: 1433244948}
   m_Layer: 5
   m_Name: Not Enough Gems Pop Up
   m_TagString: Untagged
@@ -6276,6 +6447,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433244944}
   m_CullTransparentMesh: 1
+--- !u!114 &1433244948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433244944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e397db7b07aa44a85b1141eeee57dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PopUp: {fileID: 1433244944}
+  cancelButton: {fileID: 2056153222}
 --- !u!1 &1457334247
 GameObject:
   m_ObjectHideFlags: 0
@@ -6287,6 +6472,8 @@ GameObject:
   - component: {fileID: 1457334248}
   - component: {fileID: 1457334250}
   - component: {fileID: 1457334249}
+  - component: {fileID: 1457334252}
+  - component: {fileID: 1457334251}
   m_Layer: 5
   m_Name: Chest Slot 3
   m_TagString: Untagged
@@ -6353,6 +6540,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457334247}
   m_CullTransparentMesh: 1
+--- !u!114 &1457334251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457334247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b12f538005dda4b867a05fd608e76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSlot: {fileID: 0}
+  slotAvaiable: {fileID: 1430694481}
+  slotNotAvaiable: {fileID: 582668759}
+  chestButton: {fileID: 815580843}
+  timerText: {fileID: 389111814}
+--- !u!114 &1457334252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457334247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7015be1c9ca7344abb849a5536d74b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 1
+  chestView: {fileID: 1457334251}
 --- !u!1 &1576213704
 GameObject:
   m_ObjectHideFlags: 0
@@ -6364,6 +6582,7 @@ GameObject:
   - component: {fileID: 1576213705}
   - component: {fileID: 1576213707}
   - component: {fileID: 1576213706}
+  - component: {fileID: 1576213708}
   m_Layer: 5
   m_Name: Chest Slot BackGround
   m_TagString: Untagged
@@ -6432,6 +6651,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576213704}
   m_CullTransparentMesh: 1
+--- !u!114 &1576213708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576213704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d141dad388f6234097be5bde83190fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots:
+  - {fileID: 1895392876}
+  - {fileID: 83420845}
+  - {fileID: 1457334252}
+  - {fileID: 879436491}
+  SlotFullPopUp: {fileID: 2126447957}
 --- !u!1 &1640210858
 GameObject:
   m_ObjectHideFlags: 0
@@ -7724,6 +7961,8 @@ GameObject:
   - component: {fileID: 1895392872}
   - component: {fileID: 1895392874}
   - component: {fileID: 1895392873}
+  - component: {fileID: 1895392876}
+  - component: {fileID: 1895392875}
   m_Layer: 5
   m_Name: Chest Slot 1
   m_TagString: Untagged
@@ -7790,6 +8029,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895392871}
   m_CullTransparentMesh: 1
+--- !u!114 &1895392875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895392871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b12f538005dda4b867a05fd608e76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSlot: {fileID: 0}
+  slotAvaiable: {fileID: 952728571}
+  slotNotAvaiable: {fileID: 300708202}
+  chestButton: {fileID: 1029663932}
+  timerText: {fileID: 1137488754}
+--- !u!114 &1895392876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895392871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7015be1c9ca7344abb849a5536d74b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 1
+  chestView: {fileID: 1895392875}
 --- !u!1 &1903042955
 GameObject:
   m_ObjectHideFlags: 0
@@ -8887,6 +9157,7 @@ GameObject:
   - component: {fileID: 2126447958}
   - component: {fileID: 2126447960}
   - component: {fileID: 2126447959}
+  - component: {fileID: 2126447961}
   m_Layer: 5
   m_Name: Slot Full Pop Up
   m_TagString: Untagged
@@ -8953,3 +9224,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126447957}
   m_CullTransparentMesh: 1
+--- !u!114 &2126447961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126447957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e397db7b07aa44a85b1141eeee57dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PopUp: {fileID: 2126447957}
+  cancelButton: {fileID: 801700611}
