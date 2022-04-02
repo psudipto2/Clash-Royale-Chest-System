@@ -11,7 +11,7 @@ namespace Scriptable
         [SerializeField] public int coinLowerLimit;
         [SerializeField] public int gemUpperLimit;
         [SerializeField] public int gemLowerLimit;
-        [SerializeField] public int timerInMinutes;
+        [SerializeField] public int timerInSeconds;
         [SerializeField] public Sprite closedChestImage;
         [SerializeField] public Sprite openChestImage;
     }

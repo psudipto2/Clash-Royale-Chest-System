@@ -5,7 +5,7 @@ using Singleton;
 
 namespace Common
 {
-    public class TimerContoller : MonoGenericSingleton<TimerContoller>
+    public class TimerContoller : MonoBehaviour
     {
         private int hour;
         private int minute;
@@ -13,9 +13,8 @@ namespace Common
         private string displayHour;
         private string displayMinute;
         private string displaySecond;
-        public string TimerDisplay(int timerInMinutes)
+        public string TimerDisplay(int timerInSeconds)
         {
-            int timerInSeconds = timerInMinutes * 60;
             int hour = timerInSeconds / 3600;
             int minute = (timerInSeconds - (3600 * hour)) / 60;
             int second = (timerInSeconds - (3600 * hour) - (minute * 60));

@@ -5,6 +5,7 @@ using Singleton;
 using Scriptable;
 using ChestMVC;
 using System;
+using Common;
 using Random = UnityEngine.Random;
 
 namespace ChestMVC
@@ -12,9 +13,14 @@ namespace ChestMVC
     public class ChestService : MonoGenericSingleton<ChestService>
     {
         public ChestScriptableObjectList chestList;
-        private ChestController currentController;
+        public ChestController currentController;
         [HideInInspector] public ChestScriptableObject chestScriptable;
         private List<ChestController> chests = new List<ChestController>();
+
+        private void Start()
+        {
+            CoinGemManager.Instance.SetCoinGem(100, 100);
+        }
 
         public ChestController CreateNewChest(ChestView chestView)
         {

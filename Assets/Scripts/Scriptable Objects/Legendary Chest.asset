@@ -17,6 +17,6 @@ MonoBehaviour:
   coinLowerLimit: 1000
   gemUpperLimit: 100
   gemLowerLimit: 80
-  timerInMinutes: 180
+  timerInSeconds: 10800
   closedChestImage: {fileID: 21300000, guid: 58e065b0b74f8c6469a788ff8f9b9f79, type: 3}
   openChestImage: {fileID: 21300000, guid: e615a11415b72584f975f55d3d6eaa96, type: 3}

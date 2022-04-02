@@ -11,7 +11,7 @@ namespace ChestMVC
         public int coinLowerLimit { get; set; }
         public int gemUpperLimit { get; set; }
         public int gemLowerLimit { get; set; }
-        public int timerInMinutes { get; set; }
+        public int timerInSeconds { get; set; }
         public Sprite closedChestImage { get; set; }
         public Sprite openChestImage { get; set; }
         public ChestModel(ChestScriptableObject chestScriptableObject)
@@ -20,7 +20,7 @@ namespace ChestMVC
             coinLowerLimit = chestScriptableObject.coinLowerLimit;
             gemUpperLimit = chestScriptableObject.gemUpperLimit;
             gemLowerLimit = chestScriptableObject.gemLowerLimit;
-            timerInMinutes = chestScriptableObject.timerInMinutes;
+            timerInSeconds = chestScriptableObject.timerInSeconds;
             closedChestImage = chestScriptableObject.closedChestImage;
             openChestImage = chestScriptableObject.openChestImage;
         }
