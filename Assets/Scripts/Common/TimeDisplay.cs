@@ -5,7 +5,7 @@ using Singleton;
 
 namespace Common
 {
-    public class TimerContoller : MonoBehaviour
+    public class TimeDisplay : MonoBehaviour
     {
         private int hour;
         private int minute;
@@ -20,7 +20,7 @@ namespace Common
             int second = (timerInSeconds - (3600 * hour) - (minute * 60));
             if (second > 0)
             {
-                displaySecond = second.ToString() + "S";
+                displaySecond = second.ToString() + " S";
             }
             else
             {
@@ -28,7 +28,7 @@ namespace Common
             }
             if (minute > 0)
             {
-                displayMinute = minute.ToString() + "M";
+                displayMinute = minute.ToString() + " M";
             }
             else
             {
@@ -36,13 +36,13 @@ namespace Common
             }
             if (hour > 0)
             {
-                displayHour = hour.ToString() + "H";
+                displayHour = hour.ToString() + " H";
             }
             else
             {
                 displayHour = "";
             }
-            string timer = displayHour + displayMinute + displaySecond;
+            string timer = displayHour +" "+ displayMinute +" "+ displaySecond;
             return timer;
         }
     }

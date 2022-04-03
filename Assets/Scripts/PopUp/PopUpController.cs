@@ -15,13 +15,16 @@ namespace PopUp
         [SerializeField] private GameObject unlockedChestPopUp;
         [SerializeField] private Image unlockedPopUpChestImage;
         [SerializeField] private Button unlockWithGems;
-        [SerializeField] private Button unlockWithTimer;
 
         [Header("Opening Chest Pop Up")]
         [SerializeField] private GameObject openingChestPopUp;
         [SerializeField] private Image openingChestPopUpChestImage;
         [SerializeField] private Button openWithGems;
         [SerializeField] private TextMeshProUGUI timerText;
+
+        [Header("Opened Chest Pop Up")]
+        [SerializeField] private GameObject openedChestPopup;
+        [SerializeField] private Image openedChestPopUpChestImage;
 
         [Header("Reward Pop Up")]
         [SerializeField] private GameObject rewardPopup;
@@ -37,15 +40,13 @@ namespace PopUp
         [HideInInspector]public ChestController chestController;
         private GameObject activePopUp;
         [HideInInspector]public float timer;
-        [SerializeField] private TimerContoller timerContoller;
+        [SerializeField] private TimeDisplay timerContoller;
         public void UnlockChestPopUpTrue(int GemNumber,Sprite chestImage, ChestController Controller)
         {
             unlockedChestPopUp.SetActive(true);
             unlockedPopUpChestImage.sprite = chestImage;
             unlockWithGems.GetComponentInChildren<TextMeshProUGUI>().text = GemNumber.ToString();
             this.chestController = Controller;
-            unlockWithTimer.onClick.AddListener(chestController.chestView.EnterOpeningState);
-            unlockWithGems.onClick.AddListener(chestController.chestView.OpenInstantly);
             activePopUp = unlockedChestPopUp;
         }
         public void OpeningChestPopUpTrue(int GemNumber, Sprite chestImage, ChestController Controller)
@@ -55,8 +56,14 @@ namespace PopUp
             openWithGems.GetComponentInChildren<TextMeshProUGUI>().text = GemNumber.ToString();
             timerText.text = timerContoller.TimerDisplay((int)timer);
             this.chestController = Controller;
-            openWithGems.onClick.AddListener(chestController.chestView.OpenInstantly);
             activePopUp = openingChestPopUp;
+        }
+
+        public void OpenedChestPopUp(Sprite chestImage)
+        {
+            openedChestPopup.SetActive(true);
+            openedChestPopUpChestImage.sprite = chestImage;
+            activePopUp = openedChestPopup;
         }
 
         public void RewardPopUp(int coinReward, int gemReward, Sprite chestImage) 
@@ -69,6 +76,7 @@ namespace PopUp
         public void UnlockChestPopUpFalse()
         {
             unlockedChestPopUp.SetActive(false);
+            chestController = null;
         }
 
         public void OpeningChestPopUpFalse()
@@ -91,7 +99,9 @@ namespace PopUp
         public void CloseActivePopUp()
         {
             activePopUp.SetActive(false);
+            chestController = null;
         }
+        
     }
 }
 

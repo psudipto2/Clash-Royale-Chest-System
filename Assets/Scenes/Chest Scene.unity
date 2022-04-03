@@ -1027,7 +1027,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 233351911}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1129727178}
+        m_TargetAssemblyTypeName: ChestMVC.ChestService, Assembly-CSharp
+        m_MethodName: OpenInstantly
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &233351911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2146,11 +2158,12 @@ MonoBehaviour:
   unlockedChestPopUp: {fileID: 865256430}
   unlockedPopUpChestImage: {fileID: 1090176038}
   unlockWithGems: {fileID: 1308078354}
-  unlockWithTimer: {fileID: 2108333524}
   openingChestPopUp: {fileID: 47519903}
   openingChestPopUpChestImage: {fileID: 560818353}
   openWithGems: {fileID: 233351910}
   timerText: {fileID: 2124562340}
+  openedChestPopup: {fileID: 1102996949}
+  openedChestPopUpChestImage: {fileID: 1194522455}
   rewardPopup: {fileID: 737221211}
   coinText: {fileID: 268521810}
   gemText: {fileID: 1385687934}
@@ -5682,7 +5695,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1308078355}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1129727178}
+        m_TargetAssemblyTypeName: ChestMVC.ChestService, Assembly-CSharp
+        m_MethodName: OpenInstantly
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1308078355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6071,7 +6096,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1389141034}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1129727178}
+        m_TargetAssemblyTypeName: ChestMVC.ChestService, Assembly-CSharp
+        m_MethodName: OpenChest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1389141034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9235,7 +9272,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2108333525}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1129727178}
+        m_TargetAssemblyTypeName: ChestMVC.ChestService, Assembly-CSharp
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2108333525
 MonoBehaviour:
   m_ObjectHideFlags: 0

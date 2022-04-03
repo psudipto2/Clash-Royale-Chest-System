@@ -43,7 +43,7 @@ namespace ChestMVC
         }
         public int GetGemCost(float timer)
         {
-            return Mathf.CeilToInt(timer / 100);
+            return Mathf.CeilToInt(timer / 720);
         }
 
         public IEnumerator StartTimer()
@@ -56,7 +56,7 @@ namespace ChestMVC
                 yield return new WaitForSeconds(1f);
                 timer -= 1;
             }
-            //chestView.EnteringUnlockedState();
+            chestView.EnteringOpenedState();
             
         }
 

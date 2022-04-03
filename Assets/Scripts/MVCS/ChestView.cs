@@ -16,7 +16,7 @@ namespace ChestMVC
     {
         public ChestController chestController;
         [HideInInspector] public Slot currentSlot;
-        [SerializeField] public TimerContoller timerContoller;
+        [SerializeField] public TimeDisplay timerContoller;
         [HideInInspector] public ChestStates currentState;
 
         [Header("Slot View")]
@@ -59,6 +59,8 @@ namespace ChestMVC
             currentState = ChestStates.Unlocked;
         }
 
+        
+
         public void CreateEmptyChestView()
         {
             slotAvaiable.SetActive(true);
@@ -89,6 +91,10 @@ namespace ChestMVC
                 //ChestService.Instance.currentController = chestController;
                 PopUpController.Instance.OpeningChestPopUpTrue(chestController.gemCost, chestController.chestModel.closedChestImage, chestController);                
             }
+            else if (currentState == ChestStates.Opened)
+            {
+                PopUpController.Instance.OpenedChestPopUp(chestController.chestModel.closedChestImage);
+            }
         }
         
         public void EnterOpeningState()
@@ -101,19 +107,36 @@ namespace ChestMVC
 
         public void OpenInstantly()
         {
-            if (CoinGemManager.Instance.gem < chestController.gemCost)
+            if (CoinGemManager.Instance.GetGem() < chestController.GetGemCost(chestController.timer)) 
             {
                 PopUpController.Instance.NotEnoughGemsPopUp();
                 PopUpController.Instance.CloseActivePopUp();
             }
+            else
+            {
+                
+                CoinGemManager.Instance.DecreaseGem(chestController.GetGemCost(chestController.timer));
+                OpenChest();
+            }
+            
+        }
+        public void EnteringOpenedState()
+        {
+            currentState = ChestStates.Opened;
+            timerImage.SetActive(false);
+            chestStatus.text = "Open Now!";
+        }
+        public void OpenChest()
+        {
             PopUpController.Instance.CloseActivePopUp();
-            CoinGemManager.Instance.DecreaseGem(chestController.gemCost);
-            PopUpController.Instance.RewardPopUp(chestController.coinReward, chestController.gemReward,chestController.chestModel.openChestImage);
+            PopUpController.Instance.RewardPopUp(chestController.coinReward, chestController.gemReward, chestController.chestModel.openChestImage);
             RecieveRewards(chestController.coinReward, chestController.gemReward);
+            ChestService.Instance.currentController = chestController;
             CreateEmptyChestView();
             SlotController.Instance.MakeSlotAvaialable(currentSlot);
             SlotController.Instance.MakeOtherChestUnlocked();
             currentSlot.chestController = null;
+            currentState = ChestStates.None;
         }
         private void RecieveRewards(int coinReward,int gemReward)
         {

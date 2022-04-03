@@ -10,18 +10,20 @@ namespace Common
     public class CoinGemManager : MonoGenericSingleton<CoinGemManager>
     {
         private int coin;
-        [HideInInspector] public int gem;
+        [SerializeField]private int gem;
 
         [SerializeField] private TextMeshProUGUI coinNumber;
         [SerializeField] private TextMeshProUGUI gemNumber;
 
-        public void SetCoinGem(int coin,int gem)
+        private void Start()
         {
-            this.coin = coin;
-            this.gem = gem;
+            coin = 0;
+            gem = 2;
             coinNumber.text = coin.ToString();
             gemNumber.text = gem.ToString();
         }
+
+        
         public void IncreaseCoin(int coinValue)
         {
             coin += coinValue;
@@ -34,7 +36,13 @@ namespace Common
         }
         public void DecreaseGem(int gemValue)
         {
-            gem -= gemValue;
+            Debug.Log("Decreasing Gem");
+            gem = gem - gemValue;
+            gemNumber.text = gem.ToString();
+        }
+        public int GetGem()
+        {
+            return gem;
         }
     }
 }
